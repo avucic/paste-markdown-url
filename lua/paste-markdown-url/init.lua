@@ -1,6 +1,6 @@
 -- based on this https://benjamincongdon.me/blog/2020/06/27/Vim-Tip-Paste-Markdown-Link-with-Automatic-Title-Fetching/
 local parse_url = function()
-	local url = vim.fn.getreg('"')
+	local url = vim.fn.getreg("*")
 
 	if url:match("^https?") == nil then
 		vim.notify("clipboard content is not valid url", vim.log.levels.WARN)
